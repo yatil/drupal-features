@@ -1,7 +1,8 @@
 name = Anreißer
 core = 7.x
 package = Features
-version = 7.x-1.0
+php = 5.2.4
+version = 7.x-1.1-beta1
 project = anreisser
 dependencies[] = ctools
 dependencies[] = ds
@@ -16,6 +17,7 @@ dependencies[] = text
 features[ctools][] = linkit:linkit_profiles:1
 features[features_api][] = api:1
 features[field][] = node-frontpage_teaser-field_image
+features[field][] = node-frontpage_teaser-field_text
 features[field][] = node-frontpage_teaser-field_verweis
 features[linkit_profiles][] = standard
 features[node][] = frontpage_teaser

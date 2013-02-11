@@ -59,7 +59,7 @@ function anreisser_field_default_fields() {
             'image_style' => '',
           ),
           'type' => 'image',
-          'weight' => 1,
+          'weight' => '0',
         ),
         'teaser' => array(
           'label' => 'hidden',
@@ -104,6 +104,78 @@ function anreisser_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'media_generic',
+        'weight' => '1',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-frontpage_teaser-field_text'.
+  $fields['node-frontpage_teaser-field_text'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_text',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(),
+      'translatable' => '0',
+      'type' => 'text_long',
+    ),
+    'field_instance' => array(
+      'bundle' => 'frontpage_teaser',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => '1',
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'ds_extras_field_template' => '',
+      'entity_type' => 'node',
+      'field_name' => 'field_text',
+      'label' => 'Text',
+      'required' => 0,
+      'settings' => array(
+        'linkit' => array(
+          'enable' => 0,
+          'insert_plugin' => '',
+        ),
+        'text_processing' => '0',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'rows' => '2',
+        ),
+        'type' => 'text_textarea',
         'weight' => '2',
       ),
     ),
@@ -155,7 +227,7 @@ function anreisser_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 2,
+          'weight' => '2',
         ),
         'teaser' => array(
           'label' => 'hidden',
@@ -175,7 +247,7 @@ function anreisser_field_default_fields() {
           'enable' => 1,
           'insert_plugin' => 'raw_url',
         ),
-        'text_processing' => '1',
+        'text_processing' => '0',
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -193,6 +265,7 @@ function anreisser_field_default_fields() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Bild');
+  t('Text');
   t('Verweis');
 
   return $fields;
