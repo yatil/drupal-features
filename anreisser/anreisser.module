@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Anreißer feature.
+ */
+
+include_once 'anreisser.features.inc';
